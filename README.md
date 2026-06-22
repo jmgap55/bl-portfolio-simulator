@@ -19,6 +19,7 @@ The project is heavily modularized to separate data extraction, view generation,
 
 - **`Main.R`**: The core execution script. It handles data downloading via Yahoo Finance, defines the walk-forward backtesting loop, aggregates the returns for all four models, and generates the final performance and weight evolution plots.
 - **`ConstruccionBenchmark.R`**: Reconstructs the dynamic benchmark (`USA30`) using backward induction. It aligns historical prices with current market capitalization to simulate a market-weighted index for accurate alpha/beta calculation.
+NOTE: Make sure to execute Main.r first. It generates the .RData workspace required to run this script.
 - **`Zscore.R`**: The fundamental scoring engine. It processes raw financial data (`df_2024_raw.csv`) to compute a custom Z-Score based on Earnings Yield, FCF Yield, EV/EBITDA, ROIC, and NetDebt/EBITDA, establishing the views for the Fundamental Value portfolio.
 - **`funciones_vistas.R`**: Contains the view-generator functions (`P`, `Q`, and `Omega` matrices) for the Black-Litterman model:
   - `generar_vistas_sma()`: Trend-based signals.
